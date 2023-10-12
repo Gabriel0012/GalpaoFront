@@ -25,8 +25,8 @@ function login() {
 <template>
   <div>
     <h1>Seja bem vindo</h1>
-    <FormInput v-model="formUser.userName" type="text" label="Usuário" />
-    <FormInput v-model="formUser.password" type="text" label="Senha" />
+    <FormInput v-model="formUser.userName" type="text" label="Usuário" color="primary" />
+    <FormInput v-model="formUser.password" type="text" label="Senha" color="primary"/>
     <GButton text="Entrar" @click="login" color="primary" shape="blocked" />
   </div>
 </template>

@@ -1,7 +1,6 @@
 <script setup lang="ts">
 // Props and emites
-defineProps<{ text: string, color: string, shape: string }>()
-
+defineProps<{ text: string; color: string; shape: string }>()
 </script>
 
 <template>
@@ -10,13 +9,16 @@ defineProps<{ text: string, color: string, shape: string }>()
   </section>
 </template>
 
-<style scoped lang="css">
-
+<style scoped lang="scss">
 section {
   width: 100%;
   height: 100%;
   display: flex;
   align-items: center;
+
+  &.shape {
+    display: block;
+  }
 }
 
 button {
@@ -31,17 +33,9 @@ button {
 
   padding: 5px 10px;
   border-radius: 6px;
-}
-button.primary {
-  background-color: var(--color-primary);
-  color: var(--vt-c-black-mute);
-}
-
-section.shape {
-  display: block;
-}
-
-section {
-  
+  &.primary {
+    background-color: var(--color-primary);
+    color: var(--vt-c-black-mute);
+  }
 }
 </style>
